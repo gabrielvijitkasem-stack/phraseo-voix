@@ -227,8 +227,9 @@
           <ul class="small">
             <li>Seulement ta voix lisant les 20 phrases, et le texte de chaque phrase. Ni ton nom, ni ton numéro, ni ta position.</li>
             <li>
-              Les fichiers sont envoyés sur le Google Drive personnel de Gabriel Vijitkasem, fondateur de Phraseo, et ne sont partagés avec
-              personne.
+              Les fichiers sont envoyés sur le Google Drive personnel de Gabriel Vijitkasem, fondateur de Phraseo, puis copiés sur son
+              ordinateur pour l'entraînement. Personne d'autre n'y a accès, et ils ne sont envoyés à aucun service d'intelligence
+              artificielle. Google héberge le Drive selon ses propres conditions, éventuellement hors de l'Union européenne.
             </li>
             <li>Ils servent uniquement à entraîner la reconnaissance vocale de Phraseo. Ils ne sont jamais vendus ni publiés.</li>
             <li>Ils sont supprimés après l'entraînement, et au plus tard un an après ton enregistrement.</li>
@@ -302,7 +303,8 @@
       // Essai sur le poste seulement : ?essai=<adresse locale> remplace le script Google.
       const ESSAI = location.hostname === "localhost" ? new URLSearchParams(location.search).get("essai") : null;
       const ENDPOINT = ESSAI || DRIVE_ENDPOINT;
-      const CONSENT_VERSION = "2026-11-16";
+      // Texte du consentement modifié le 17 nov. 2026 (hébergement par Google, copie sur le poste) : nouvelle version.
+      const CONSENT_VERSION = "2026-11-17";
       const PHRASES_PER_PERSON = 20;
 
       const $ = id => document.getElementById(id);
